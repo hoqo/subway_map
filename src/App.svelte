@@ -1,11 +1,19 @@
 <script>
-	export let name;
+	import Map from './Map/Map.svelte';
+
 </script>
 
 <style>
-	h1 {
-		color: purple;
-	}
+ header {
+	 text-align: center;
+ }
 </style>
 
-<h1>Hello {name}!</h1>
+<header>
+	<h1>Kyiv Rapid Transit Map</h1>
+</header>
+
+<!-- role=main to support IE11 and lower -->
+<main role="main">
+	<Map />
+</main>
