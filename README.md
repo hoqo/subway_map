@@ -1,33 +1,8 @@
-# svelte app
+# Kiyv Subway Map
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template-webpack.
+Interactive Kiyv subway map. 
 
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
-
-```bash
-npx degit sveltejs/template-webpack svelte-app
-cd svelte-app
-```
-
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
-
-
-## Get started
-
-Install the dependencies...
-
-```bash
-cd svelte-app
-npm install
-```
-
-...then start webpack:
-
-```bash
-npm run dev
-```
-
-Navigate to [localhost:8080](http://localhost:8080). You should see your app running. Edit a component file in `src`, save it, and the page should reload with your changes.
+Base to this project: [official map of the subway](http://www.metro.kiev.ua/sites/default/files/images/metro-map_wagon_v1.9.1%20-%20660%20x%20690_0.jpg).
 
 
 ## Deploying to the web
