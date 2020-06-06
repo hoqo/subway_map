@@ -1,5 +1,6 @@
 <script>
 	import Map from './Map/Map.svelte';
+	import Legend from './Legend/Legend.svelte';
 
 </script>
 
@@ -16,4 +17,5 @@
 <!-- role=main to support IE11 and lower -->
 <main role="main">
 	<Map />
+	<Legend />
 </main>
