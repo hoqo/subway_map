@@ -1,5 +1,10 @@
-import type { SvelteComponentDev } from "svelte/internal";
+import type { SvelteComponent } from "svelte/internal";
 
 export interface ExtendedWindow extends Window {
-  app: SvelteComponentDev,
+  app: SvelteComponent,
+}
+
+export interface iLegendItem {
+  value: string,
+  colorCode: string,
 }
