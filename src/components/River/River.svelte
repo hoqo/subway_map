@@ -4,13 +4,12 @@
   }
 
   .container {
-    width: 50%;
-    margin-left: 50%;
+    width: auto;
   }
 </style>
 
 <div class="container">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020.4 747.1" fill="none">
+  <svg viewBox="0 0 1020.4 747.1" fill="none">
     <style>
       .a {
         fill-opacity: 0.8;

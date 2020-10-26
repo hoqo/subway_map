@@ -6,6 +6,6 @@
 
 </style>
 
-<div>
-    LEGEND
-</div>
+<section>
+     Dnipro River
+</section>
