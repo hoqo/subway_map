@@ -7,8 +7,6 @@
 <style>
     .container {
         display: flex;
-        justify-content: space-between;
-        max-width: 150px;
     }
 
     .color-block {
@@ -16,6 +14,7 @@
         height: 24px;
         width: 24px;
         border-radius: 4px;
+        margin-right: 16px;
     }
 
     .name {
@@ -26,6 +25,6 @@
 <template>
     <div class="container">
         <div class="color-block" style="--color: {item.colorCode}"></div>
-        <span class="name"><strong>{item.value}</strong></span>
+        <span class="name"><strong>{item.name}</strong></span>
     </div>
 </template>
