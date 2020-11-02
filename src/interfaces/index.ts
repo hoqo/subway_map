@@ -1,4 +1,5 @@
 import type { SvelteComponent } from "svelte/internal";
+import type { tBend, tPoint } from "types";
 
 export interface ExtendedWindow extends Window {
   app: SvelteComponent,
@@ -7,13 +8,6 @@ export interface ExtendedWindow extends Window {
 export interface iLegendItem {
   name: string,
   colorCode: string,
-}
-
-type tBend = 'left' | 'right';
-
-type tPoint = {
-  x: number,
-  y: number,
 }
 
 export interface iSubwayStation {

@@ -1,11 +1,10 @@
 <script>
-    import RiverSvg from '../River/River.svelte';
+  import RiverSvg from 'components/River/River.svelte';
 </script>
 
 <style>
-
 </style>
 
 <template>
-    <RiverSvg />
+  <RiverSvg />
 </template>
