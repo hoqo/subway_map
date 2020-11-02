@@ -6,31 +6,46 @@ const prod = mode === 'production';
 
 module.exports = {
   entry: {
-    bundle: ['./src/main.js'],
+    bundle: ['./src/main.ts'],
   },
   resolve: {
     alias: {
       svelte: path.resolve('node_modules', 'svelte'),
+      interfaces: path.resolve(__dirname, 'src/interfaces/index.ts'),
+      types: path.resolve(__dirname, 'src/types/index.ts'),
+      components: path.resolve(__dirname, 'src/components'),
     },
-    extensions: ['.mjs', '.js', '.svelte'],
+    extensions: ['.mjs', '.js', '.svelte', '.ts'],
     mainFields: ['svelte', 'browser', 'module', 'main'],
+    descriptionFiles: ['package.json'],
   },
   output: {
-    path: __dirname + '/public',
-    filename: '[name].js',
-    chunkFilename: '[name].[id].js',
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
   },
   module: {
     rules: [
       {
-        test: /\.svelte$/,
+        test: /\.(html|svelte)$/,
+        exclude: /node_modules/,
         use: {
           loader: 'svelte-loader',
           options: {
             emitCss: true,
             hotReload: true,
+            preprocess: require('svelte-preprocess')({
+              defaults: {
+                script: 'typescript',
+              },
+              tsconfigFile: './tsconfig.json',
+            }),
           },
         },
+      },
+      {
+        test: /\.ts?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
       },
       {
         test: /\.css$/,
@@ -57,5 +72,5 @@ module.exports = {
       filename: '[name].css',
     }),
   ],
-  devtool: prod ? false : 'source-map',
+  devtool: 'inline-source-map',
 };

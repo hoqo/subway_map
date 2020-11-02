@@ -10,5 +10,12 @@
   },
   "env": {
     "es6": true
-  }
+  },
+  "plugins": ["prettier-plugin-svelte"],
+  "overrides": [
+    {
+      "files": "*.json",
+      "options": { "parser": "json" }
+    }
+  ]
 }
