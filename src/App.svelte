@@ -1,19 +1,22 @@
 <script>
-	import Map from './Map/Map.svelte';
-
+  import Map from 'components/Map/Map.svelte';
+  import Legend from 'components/Legend/Legend.svelte';
 </script>
 
 <style>
- header {
-	 text-align: center;
- }
+  header {
+    text-align: center;
+  }
 </style>
 
-<header>
-	<h1>Kyiv Rapid Transit Map</h1>
-</header>
+<template>
+  <header>
+    <h1>Kyiv Rapid Transit Map</h1>
+  </header>
 
-<!-- role=main to support IE11 and lower -->
-<main role="main">
-	<Map />
-</main>
+  <!-- role=main to support IE11 and lower -->
+  <main role="main">
+    <Map />
+    <Legend />
+  </main>
+</template>
