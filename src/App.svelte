@@ -4,6 +4,10 @@
 </script>
 
 <style>
+  :global(body) {
+      padding: 0;
+  }
+
   header {
     text-align: center;
   }

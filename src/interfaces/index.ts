@@ -11,15 +11,18 @@ export interface iLegendItem {
 }
 
 export interface iSubwayStation {
-  name: string,
+  name?: string,
   // data needed to build a svg / graph
+  // TODO: consider having points as an array
   point: tPoint,
-  bend: tBend,
+  bend?: tBend,
   adjacentStation?: iSubwayStation,
 }
 
 export interface iSubwayLine {
   name: string,
   colorCode: string,
-  stations: iSubwayStation[],
+  nodes: iSubwayStation[],
 }
+
+// http://www.evolutionoftheweb.com/ - all is rendered with svgs, not in a canvas
