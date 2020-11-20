@@ -1,24 +1,11 @@
 <script lang="ts">
   import LegendItem from './LegendItem.svelte';
   import type { iLegendItem } from 'interfaces';
+  import { dniproRiver, subwayLines } from 'components/Map/mocks';
 
   const legendItems: iLegendItem[] = [
-    {
-      name: 'Dnipro River',
-      colorCode: '#aae3ff',
-    },
-    {
-      name: 'Red metro line',
-      colorCode: 'red',
-    },
-    {
-      name: 'Green metro line',
-      colorCode: 'green',
-    },
-    {
-      name: 'Blue metro line',
-      colorCode: 'blue',
-    },
+    dniproRiver,
+    ...subwayLines.map(({name, colorCode}) => ({name, colorCode}))
   ];
 </script>
 

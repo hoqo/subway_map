@@ -1,23 +1,25 @@
 <style>
-  svg {
-    z-index: -1;
-  }
+    svg {
+        z-index: -1;
+        opacity: 0.3;
+        position: absolute;
+    }
 
-  .container {
-    width: auto;
-  }
+    .container {
+        width: auto;
+    }
 </style>
 
 <div class="container">
-  <svg viewBox="0 0 1020.4 747.1" fill="none">
+  <svg viewBox="0 0 1020 747" fill="none">
     <style>
-      .a {
-        fill-opacity: 0.8;
-        fill: #aae3ff;
-        opacity: 0.8;
-        stroke-opacity: 0.6;
-        stroke: #7cd5ff;
-      }
+        .a {
+            fill-opacity: 0.8;
+            fill: #aae3ff;
+            opacity: 0.8;
+            stroke-opacity: 0.6;
+            stroke: #7cd5ff;
+        }
     </style>
     <clipPath id="p.0">
       <path d="m0 0l1020.4 0 0 747.1 -1020.4 0 0-747.1z"/>
