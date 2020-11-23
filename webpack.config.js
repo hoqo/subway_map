@@ -16,7 +16,7 @@ export default {
       types: path.resolve(__dirname, 'src/types/index.ts'),
       components: path.resolve(__dirname, 'src/components'),
     },
-    extensions: ['.mjs', '.js', '.svelte', '.ts'],
+    extensions: ['.mjs', '.js', '.svelte', '.ts', '.less'],
     mainFields: ['svelte', 'browser', 'module', 'main'],
     descriptionFiles: ['package.json'],
   },
