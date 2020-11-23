@@ -15,13 +15,14 @@ module.exports = {
       types: path.resolve(__dirname, 'src/types/index.ts'),
       components: path.resolve(__dirname, 'src/components'),
     },
-    extensions: ['.mjs', '.js', '.svelte', '.ts'],
+    extensions: ['.mjs', '.js', '.svelte', '.ts', '.less'],
     mainFields: ['svelte', 'browser', 'module', 'main'],
     descriptionFiles: ['package.json'],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].js',
+    chunkFilename: '[name].[id].js',
   },
   module: {
     rules: [
@@ -36,7 +37,9 @@ module.exports = {
             preprocess: require('svelte-preprocess')({
               defaults: {
                 script: 'typescript',
+                style: 'less',
               },
+              less: true,
               tsconfigFile: './tsconfig.json',
             }),
           },
@@ -63,6 +66,10 @@ module.exports = {
         use: {
           loader: 'svg-inline-loader',
         },
+      },
+      {
+        test: /\.less$/,
+        loader: 'less-loader', // compiles Less to CSS
       },
     ],
   },
