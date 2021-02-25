@@ -1,4 +1,4 @@
-import type { iSubwayLine } from 'interfaces';
+import type { iMapItem, iSubwayLine } from 'interfaces';
 
 export const blueLine: iSubwayLine = {
   name: 'Blue subway line',
@@ -157,21 +157,159 @@ export const blueLine: iSubwayLine = {
   ],
 };
 
-export const redLine = {
+export const redLine: iSubwayLine = {
   name: 'Red subway line',
   colorCode: 'red',
-  nodes: [{}],
+  nodes: [
+    {
+      name: 'Akadmemistechko',
+      point: {},
+    },
+    {
+      name: 'Zhytomyrska',
+      point: {},
+    },
+    {
+      name: 'Sviatoshyn',
+      point: {},
+    },
+    {
+      name: 'Nyvky',
+      point: {},
+    },
+    {
+      name: 'Beresteiska',
+      point: {},
+    },
+    {
+      name: 'Shuliavska',
+      point: {},
+    },
+    {
+      name: 'Politechnichniy Instytut',
+      point: {},
+    },
+    {
+      name: 'Vokzalna',
+      point: {},
+    },
+    {
+      name: 'Universytet',
+      point: {},
+    },
+    {
+      name: 'Teatralna',
+      point: {},
+    },
+    {
+      name: 'Khreschatyk',
+      point: {},
+    },
+    {
+      name: 'Arsenalna',
+      point: {},
+    },
+    {
+      name: 'Dnipro',
+      point: {},
+    },
+    {
+      name: 'Hidropark',
+      point: {},
+    },
+    {
+      name: 'Livoberezhna',
+      point: {},
+    },
+    {
+      name: 'Darnytsia',
+      point: {},
+    },
+    {
+      name: 'Chernihivska',
+      point: {},
+    },
+    {
+      name: 'Lisova',
+      point: {},
+    },
+  ],
 };
 
-export const greenLine = {
+export const greenLine: iSubwayLine = {
   name: 'Green subway line',
   colorCode: 'green',
-  nodes: [{}],
+  nodes: [
+    {
+      name: 'Syrets',
+      point: {},
+    },
+    {
+      name: 'Dorohozhychi',
+      point: {},
+    },
+    {
+      name: 'Lukianivska',
+      point: {},
+    },
+    {
+      name: 'Zoloti Vorota',
+      point: {},
+    },
+    {
+      name: 'Palats Sportu',
+      point: {},
+    },
+    {
+      name: 'Klovska',
+      point: {},
+    },
+    {
+      name: 'Pecherska',
+      point: {},
+    },
+    {
+      name: 'Druzhby Narodiv',
+      point: {},
+    },
+    {
+      name: 'Vydubychi',
+      point: {},
+    },
+    {
+      name: 'Slavutych',
+      point: {},
+    },
+    {
+      name: 'Osokorky',
+      point: {},
+    },
+    {
+      name: 'Pozniaky',
+      point: {},
+    },
+    {
+      name: 'Kharkivska',
+      point: {},
+    },
+    {
+      name: 'Vyrlytsia',
+      point: {},
+    },
+    {
+      name: 'Boryspilska',
+      point: {},
+    },
+    {
+      name: 'Chervoniy Khutir',
+      point: {},
+    },
+  ],
 };
 
-export const dniproRiver = {
+export const dniproRiver: iMapItem = {
   name: 'Dnipro River',
   colorCode: '#aae3ff',
 };
 
-export const subwayLines: iSubwayLine[] = [blueLine];
+export const subwayLines: iSubwayLine[] = [blueLine, redLine, greenLine];

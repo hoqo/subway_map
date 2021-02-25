@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import River from 'components/River/River.svelte';
   import { subwayLines } from 'components/Map/mocks';
   import { iSubwayStation } from 'interfaces';
@@ -8,33 +8,24 @@
 
   // filter through all nodes and get only those that have a name -> hence a station
   // TODO: consider having styling nodes and stations separately
-  const getSWStations = (nodes: iSubwayStation[]) =>
-    nodes.filter(({ name }): Boolean => !!name);
+  const getSwStations = (nodes: iSubwayStation[]) =>
+    nodes.filter(({ name }) => !!name);
 </script>
 
-<style>
-  #map {
-    z-index: 1;
-  }
-
-  .map-container {
-    position: relative;
-  }
-</style>
-
-<section class="map-container">
+<template>
   <River />
 
-  <svg id="map" width="1200" height="740" viewBox="0 0 3500 3500" fill="none">
+  <svg id="map" height="747" width="100%" viewBox="0 0 3500 3500" fill="none">
     {#each subwayLines as { nodes, colorCode }}
       <g fill="none">
         <path
           d={lineGenerator(nodes.map(({ point }) => Object.values(point)))}
           stroke={colorCode}
-          stroke-width="40" />
+          stroke-width="40"
+        />
 
-        {#each getSWStations(nodes) as { point: { x, y } }, index}
-          {#if index === 0 || index === getSWStations(nodes).length - 1}
+        {#each getSwStations(nodes) as { point: { x, y } }, index}
+          {#if index === 0 || index === getSwStations(nodes).length - 1}
             <!--TODO: get two points of the line stroke and compute the end position-->
             <rect x={x - 50} {y} width="100" height="30" fill={colorCode} />
           {:else}
@@ -46,4 +37,10 @@
   </svg>
 
   <!--  <canvas id="map-canvas" height="747" width="1020">Canvas not supported</canvas>-->
-</section>
+</template>
+
+<style>
+    #map {
+        z-index: 1;
+    }
+</style>
