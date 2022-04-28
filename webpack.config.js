@@ -1,13 +1,14 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const path = require('path');
+import path from 'path';
+import { fileURLToPath } from 'url';
 
+import { getLoaders, getPlugins } from './webpack/index.js';
+
+const __dirname = fileURLToPath(import.meta.url);
 const mode = process.env.NODE_ENV || 'development';
-const prod = mode === 'production';
 
-module.exports = {
-  entry: {
-    bundle: ['./src/main.ts'],
-  },
+export default {
+  mode,
+  entry: './src/main.ts',
   resolve: {
     alias: {
       svelte: path.resolve('node_modules', 'svelte'),
@@ -20,57 +21,23 @@ module.exports = {
     descriptionFiles: ['package.json'],
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: 'subway-map.js',
   },
   module: {
-    rules: [
-      {
-        test: /\.(html|svelte)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'svelte-loader',
-          options: {
-            emitCss: true,
-            hotReload: true,
-            preprocess: require('svelte-preprocess')({
-              defaults: {
-                script: 'typescript',
-              },
-              tsconfigFile: './tsconfig.json',
-            }),
-          },
-        },
-      },
-      {
-        test: /\.ts?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-      },
-      {
-        test: /\.css$/,
-        use: [
-          /**
-           * MiniCssExtractPlugin doesn't support HMR.
-           * For developing, use 'style-loader' instead.
-           * */
-          prod ? MiniCssExtractPlugin.loader : 'style-loader',
-          'css-loader',
-        ],
-      },
-      {
-        test: /\.svg$/,
-        use: {
-          loader: 'svg-inline-loader',
-        },
-      },
-    ],
+    rules: getLoaders(mode),
   },
-  mode,
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-    }),
-  ],
+  plugins: getPlugins(mode),
   devtool: 'inline-source-map',
+  devServer: {
+    hot: true,
+    client: {
+      overlay: true,
+    },
+    open: {
+      app: {
+        name: 'Google Chrome', // 'Chrome' is 'Google Chrome' on macOS, 'google-chrome' on Linux, and 'chrome' on Windows
+        arguments: ['--new-window'],
+      },
+    },
+  },
 };
