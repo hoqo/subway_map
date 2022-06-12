@@ -1,5 +1,5 @@
-<script>
-  import { iLegendItem } from 'interfaces';
+<script lang="ts">
+  import type { iLegendItem } from 'interfaces';
 
   export let item: iLegendItem;
 </script>

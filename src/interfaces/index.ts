@@ -1,5 +1,5 @@
-import type { SvelteComponent } from "svelte/internal";
-import type { tBend, tPoint } from "types";
+import type { SvelteComponent } from 'svelte/internal';
+import type { tBend, tPoint } from 'types';
 
 export interface ExtendedWindow extends Window {
   app: SvelteComponent,
@@ -12,7 +12,7 @@ export interface iLegendItem {
 
 export interface iSubwayStation {
   name: string,
-  // data needed to build an svg / graph
+  // data needed to build a svg / graph
   point: tPoint,
   bend: tBend,
   adjacentStation?: iSubwayStation,

@@ -14,8 +14,7 @@
     <h1>Kyiv Rapid Transit Map</h1>
   </header>
 
-  <!-- role=main to support IE11 and lower -->
-  <main role="main">
+  <main>
     <Map />
     <Legend />
   </main>

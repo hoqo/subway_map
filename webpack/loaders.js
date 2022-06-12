@@ -4,22 +4,22 @@ import sveltePreprocess from 'svelte-preprocess';
 import { isProdMode } from './utils.js';
 
 export const getLoaders = (mode) => {
-  const babelLoader = {
+  const tsLoader = {
     test: /\.(js|ts|svelte)$/,
     exclude: /(node_modules)/,
     use: {
-      loader: 'babel-loader',
+      loader: 'ts-loader',
     },
   };
 
   const svelteLoader = {
-    test: /\.svelte$/,
+    test:/\.(html|svelte)$/,
     exclude: /node_modules/,
     use: {
       loader: 'svelte-loader',
       options: {
         emitCss: true,
-        hotReload: true,
+        hotReload: !isProdMode(mode),
         preprocess: sveltePreprocess({
           tsconfigFile: './tsconfig.json',
         }),
@@ -42,5 +42,5 @@ export const getLoaders = (mode) => {
     },
   };
 
-  return [babelLoader, svelteLoader, stylesLoader, svgInlineLoader];
+  return [tsLoader, svelteLoader, stylesLoader, svgInlineLoader];
 };

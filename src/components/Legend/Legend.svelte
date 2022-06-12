@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
   import LegendItem from './LegendItem.svelte';
-  import { iLegendItem } from 'interfaces';
+  import type { iLegendItem } from 'interfaces';
 
   const legendItems: iLegendItem[] = [
     {
