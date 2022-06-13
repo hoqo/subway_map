@@ -1,8 +1,7 @@
 import type { iMapItem, iSubwayLine } from 'interfaces';
 
 export const blueLine: iSubwayLine = {
-  name: 'Blue subway line',
-  colorCode: '#2880c3',
+  name: 'blue',
   nodes: [
     {
       name: 'Heriov Dnipra',
@@ -166,8 +165,7 @@ export const blueLine: iSubwayLine = {
 };
 
 export const redLine: iSubwayLine = {
-  name: 'Red subway line',
-  colorCode: 'red',
+  name: 'red',
   nodes: [
     {
       name: 'Akadmemistechko',
@@ -331,8 +329,7 @@ export const redLine: iSubwayLine = {
 };
 
 export const greenLine: iSubwayLine = {
-  name: 'Green subway line',
-  colorCode: 'green',
+  name: 'green',
   nodes: [
     {
       name: 'Syrets',
@@ -499,7 +496,6 @@ export const greenLine: iSubwayLine = {
 
 export const dniproRiver: iMapItem = {
   name: 'Dnipro River',
-  colorCode: '#aae3ff',
 };
 
 export const subwayLines: iSubwayLine[] = [blueLine, redLine, greenLine];

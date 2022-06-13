@@ -1,7 +1,7 @@
 <script lang="ts">
   import LegendItem from './LegendItem.svelte';
   import type { iMapItem } from 'interfaces';
-  import { dniproRiver, subwayLines } from 'components/Map/mocks';
+  import { dniproRiver, subwayLines } from 'mocks/mocks';
 
   const legendItems: iMapItem[] = [
     dniproRiver,

@@ -2,7 +2,6 @@ import type { tBend, tPoint } from 'types';
 
 export interface iMapItem {
   name: string;
-  colorCode: string;
 }
 
 export interface iSubwayStation {
