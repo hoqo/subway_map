@@ -1,10 +1,12 @@
 <script lang="ts">
   import River from 'components/River/River.svelte';
   import { subwayLines } from 'components/Map/mocks';
-  import { iSubwayStation } from 'interfaces';
-  import { Line, line, curveCatmullRom } from 'd3';
+  import type { iSubwayStation } from 'interfaces';
+  import { curveCatmullRom, line } from 'd3';
+  import type { Line } from 'd3';
 
-  const lineGenerator: Line = line().curve(curveCatmullRom.alpha(1));
+  const lineGenerator: Line<[number, number]> = line()
+    .curve(curveCatmullRom.alpha(1));
 
   // filter through all nodes and get only those that have a name -> hence a station
   // TODO: consider having styling nodes and stations separately
