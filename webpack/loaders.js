@@ -32,7 +32,7 @@ export const getLoaders = (mode) => {
   };
 
   const stylesLoader = {
-    test: /\.css$/,
+    test: /\.(css)$/,
     use: [
       isProdMode(mode) ? MiniCssExtractPlugin.loader : 'style-loader',
       'css-loader',

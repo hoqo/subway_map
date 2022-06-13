@@ -16,6 +16,7 @@ export default {
       interfaces: path.resolve(__dirname, 'src/interfaces/index.ts'),
       types: path.resolve(__dirname, 'src/types/index.ts'),
       components: path.resolve(__dirname, 'src/components'),
+      mocks: path.resolve(__dirname, 'src/mocks'),
     },
     extensions: ['.mjs', '.js', '.svelte', '.ts', '.less'],
     mainFields: ['svelte', 'browser', 'module', 'main'],
