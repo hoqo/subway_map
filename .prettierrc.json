@@ -9,7 +9,7 @@
   "trailingComma": "es5",
   "tabWidth": 2,
   "singleQuote": true,
-  "svelteSortOrder" : "options-scripts-styles-markup",
+  "svelteSortOrder" : "options-scripts-markup-styles",
   "overrides": [
     {
       "files": "*.json",
