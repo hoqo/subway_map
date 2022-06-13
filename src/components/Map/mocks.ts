@@ -7,151 +7,159 @@ export const blueLine: iSubwayLine = {
     {
       name: 'Heriov Dnipra',
       point: {
-        x: 2140,
-        y: 250,
+        x: 1991,
+        y: 246,
       },
     },
     {
       name: 'Minska',
       point: {
-        x: 2140,
-        y: 430,
+        x: 1991,
+        y: 405,
       },
     },
     {
       name: 'Obolon',
       point: {
-        x: 2140,
-        y: 600,
+        x: 1991,
+        y: 570,
       },
     },
     {
       name: 'Pochaina',
       point: {
-        x: 2140,
-        y: 780,
+        x: 1991,
+        y: 727,
       },
     },
     {
       name: 'Tarasa Shevchenka',
       point: {
-        x: 2140,
-        y: 940,
+        x: 1991,
+        y: 874,
       },
     },
     {
       name: 'Kontraktova Ploshcha',
       point: {
-        x: 2140,
-        y: 1120,
+        x: 1991,
+        y: 1034,
       },
     },
     {
       name: 'Poshtova Ploshcha',
       point: {
-        x: 2140,
-        y: 1300,
+        x: 1991,
+        y: 1197,
       },
     },
     {
       name: 'Maidan Nezalezhnosti',
       point: {
-        x: 2140,
-        y: 1475,
+        x: 1991,
+        y: 1390,
       },
     },
+
     {
       point: {
-        x: 2125,
-        y: 1710,
+        x: 1966,
+        y: 1604,
       },
     },
+
     {
       name: 'Ploshcha Lva Tolstoho',
       point: {
-        x: 1910,
-        y: 1960,
+        x: 1774,
+        y: 1821,
       },
     },
+
     {
       point: {
-        x: 1810,
-        y: 2070,
+        x: 1692,
+        y: 1922,
       },
     },
+
     {
       name: 'Olimpiiska',
       point: {
-        x: 1800,
-        y: 2140,
+        x: 1674,
+        y: 2006,
       },
     },
     {
       name: 'Palats Ukraina',
       point: {
-        x: 1800,
-        y: 2300,
+        x: 1674,
+        y: 2147,
       },
     },
     {
       name: 'Lybidska',
       point: {
-        x: 1800,
-        y: 2445,
+        x: 1674,
+        y: 2284,
       },
     },
+
     {
       point: {
-        x: 1790,
-        y: 2530,
+        x: 1649,
+        y: 2390,
       },
     },
+
     {
       name: 'Demiivska',
       point: {
-        x: 1670,
-        y: 2660,
+        x: 1532,
+        y: 2518,
       },
     },
     {
       name: 'Holosiivska',
       point: {
-        x: 1550,
-        y: 2785,
+        x: 1427,
+        y: 2620,
       },
     },
     {
       name: 'Vasylkivska',
       point: {
-        x: 1440,
-        y: 2890,
+        x: 1329,
+        y: 2719,
       },
     },
     {
       name: 'Vystavkovyi Tsentr',
       point: {
-        x: 1325,
-        y: 3000,
+        x: 1219,
+        y: 2828,
       },
     },
+
     {
       point: {
-        x: 1250,
-        y: 3070,
+        x: 1156,
+        y: 2879,
       },
     },
+
     {
       name: 'Ipodrom',
       point: {
-        x: 1130,
-        y: 3100,
+        x: 1023,
+        y: 2899,
       },
     },
     {
       name: 'Teremky',
       point: {
-        x: 850,
-        y: 3100,
+        x: 774,
+        y: 2899,
       },
     },
   ],
@@ -163,75 +171,161 @@ export const redLine: iSubwayLine = {
   nodes: [
     {
       name: 'Akadmemistechko',
-      point: {},
+      point: {
+        x: 292,
+        y: 707,
+      },
     },
     {
       name: 'Zhytomyrska',
-      point: {},
+      point: {
+        x: 414,
+        y: 821,
+      },
     },
     {
       name: 'Sviatoshyn',
-      point: {},
+      point: {
+        x: 518,
+        y: 924,
+      },
     },
     {
       name: 'Nyvky',
-      point: {},
+      point: {
+        x: 623,
+        y: 1025,
+      },
     },
     {
       name: 'Beresteiska',
-      point: {},
+      point: {
+        x: 766,
+        y: 1177,
+      },
     },
     {
       name: 'Shuliavska',
-      point: {},
+      point: {
+        x: 878,
+        y: 1288,
+      },
     },
     {
       name: 'Politechnichniy Instytut',
-      point: {},
+      point: {
+        x: 1011,
+        y: 1419,
+      },
     },
+
+    {
+      point: {
+        x: 1093,
+        y: 1458,
+      },
+    },
+
     {
       name: 'Vokzalna',
-      point: {},
+      point: {
+        x: 1246,
+        y: 1479,
+      },
     },
     {
       name: 'Universytet',
-      point: {},
+      point: {
+        x: 1501,
+        y: 1479,
+      },
     },
     {
       name: 'Teatralna',
-      point: {},
+      point: {
+        x: 1734,
+        y: 1479,
+      },
     },
     {
       name: 'Khreschatyk',
-      point: {},
+      point: {
+        x: 2064,
+        y: 1479,
+      },
     },
+
+    {
+      point: {
+        x: 2275,
+        y: 1495,
+      },
+    },
+
     {
       name: 'Arsenalna',
-      point: {},
+      point: {
+        x: 2386,
+        y: 1598,
+      },
     },
     {
       name: 'Dnipro',
-      point: {},
+      point: {
+        x: 2497,
+        y: 1702,
+      },
     },
+
+    {
+      point: {
+        x: 2573,
+        y: 1759,
+      },
+    },
+
     {
       name: 'Hidropark',
-      point: {},
+      point: {
+        x: 2682,
+        y: 1775,
+      },
     },
+
+    {
+      point: {
+        x: 2835,
+        y: 1760,
+      },
+    },
+
     {
       name: 'Livoberezhna',
-      point: {},
+      point: {
+        x: 2890,
+        y: 1725,
+      },
     },
     {
       name: 'Darnytsia',
-      point: {},
+      point: {
+        x: 2995,
+        y: 1613,
+      },
     },
     {
       name: 'Chernihivska',
-      point: {},
+      point: {
+        x: 3098,
+        y: 1508,
+      },
     },
     {
       name: 'Lisova',
-      point: {},
+      point: {
+        x: 3194,
+        y: 1414,
+      },
     },
   ],
 };
@@ -242,67 +336,163 @@ export const greenLine: iSubwayLine = {
   nodes: [
     {
       name: 'Syrets',
-      point: {},
+      point: {
+        x: 1204,
+        y: 882,
+      },
     },
     {
       name: 'Dorohozhychi',
-      point: {},
+      point: {
+        x: 1372,
+        y: 1049,
+      },
     },
     {
       name: 'Lukianivska',
-      point: {},
+      point: {
+        x: 1495,
+        y: 1174,
+      },
     },
+
+    {
+      point: {
+        x: 1664,
+        y: 1390,
+      },
+    },
+
     {
       name: 'Zoloti Vorota',
-      point: {},
+      point: {
+        x: 1666,
+        y: 1398,
+      },
     },
+
+    {
+      point: {
+        x: 1689,
+        y: 1615,
+      },
+    },
+
     {
       name: 'Palats Sportu',
-      point: {},
+      point: {
+        x: 1876,
+        y: 1821,
+      },
     },
+
+    {
+      point: {
+        x: 1971,
+        y: 1917,
+      },
+    },
+
     {
       name: 'Klovska',
-      point: {},
+      point: {
+        x: 1990,
+        y: 2000,
+      },
     },
     {
       name: 'Pecherska',
-      point: {},
+      point: {
+        x: 1990,
+        y: 2146,
+      },
     },
     {
       name: 'Druzhby Narodiv',
-      point: {},
+      point: {
+        x: 1990,
+        y: 2288,
+      },
     },
+
+    {
+      point: {
+        x: 2006,
+        y: 2383,
+      },
+    },
+
     {
       name: 'Vydubychi',
-      point: {},
+      point: {
+        x: 2072,
+        y: 2468,
+      },
     },
     {
       name: 'Slavutych',
-      point: {},
+      point: {
+        x: 2308,
+        y: 2707,
+      },
     },
     {
       name: 'Osokorky',
-      point: {},
+      point: {
+        x: 2427,
+        y: 2829,
+      },
     },
+
+    {
+      point: {
+        x: 2520,
+        y: 2888,
+      },
+    },
+
     {
       name: 'Pozniaky',
-      point: {},
+      point: {
+        x: 2584,
+        y: 2897,
+      },
     },
     {
       name: 'Kharkivska',
-      point: {},
+      point: {
+        x: 2809,
+        y: 2897,
+      },
     },
+
+    {
+      point: {
+        x: 2940,
+        y: 2863,
+      },
+    },
+
     {
       name: 'Vyrlytsia',
-      point: {},
+      point: {
+        x: 2978,
+        y: 2836,
+      },
     },
     {
       name: 'Boryspilska',
-      point: {},
+      point: {
+        x: 3080,
+        y: 2723,
+      },
     },
     {
       name: 'Chervoniy Khutir',
-      point: {},
+      point: {
+        x: 3188,
+        y: 2621,
+      },
     },
   ],
 };

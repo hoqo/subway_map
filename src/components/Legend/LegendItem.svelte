@@ -6,15 +6,7 @@
 
 <style lang="less">
   li {
-    display: flex;
-
-    &:not(:last-child) {
-      margin-bottom: 8px;
-    }
-
-    &:first-child {
-      margin-top: 24px;
-    }
+    display: inline-flex;
   }
 
   .color-block {

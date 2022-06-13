@@ -5,8 +5,9 @@
   import { curveCatmullRom, line } from 'd3';
   import type { Line } from 'd3';
 
-  const lineGenerator: Line<[number, number]> = line()
-    .curve(curveCatmullRom.alpha(1));
+  const lineGenerator: Line<[number, number]> = line().curve(
+    curveCatmullRom.alpha(1)
+  );
 
   // filter through all nodes and get only those that have a name -> hence a station
   // TODO: consider having styling nodes and stations separately
@@ -23,26 +24,20 @@
         <path
           d={lineGenerator(nodes.map(({ point }) => Object.values(point)))}
           stroke={colorCode}
-          stroke-width="40"
+          stroke-width="30"
         />
 
-        {#each getSwStations(nodes) as { point: { x, y } }, index}
-          {#if index === 0 || index === getSwStations(nodes).length - 1}
-            <!--TODO: get two points of the line stroke and compute the end position-->
-            <rect x={x - 50} {y} width="100" height="30" fill={colorCode} />
-          {:else}
-            <rect {x} {y} width="50" height="30" fill={colorCode} />
-          {/if}
+        {#each getSwStations(nodes) as { name, point: { x, y } }}
+          <circle cx={x} cy={y} fill={colorCode} r="50" />
+          <text>{name}</text>
         {/each}
       </g>
     {/each}
   </svg>
-
-  <!--  <canvas id="map-canvas" height="747" width="1020">Canvas not supported</canvas>-->
 </template>
 
 <style>
-    #map {
-        z-index: 1;
-    }
+  #map {
+    z-index: 1;
+  }
 </style>
