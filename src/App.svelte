@@ -6,20 +6,31 @@
 <style>
   :global(body) {
       padding: 0;
+      font-family: Courier, sans-serif;
+  }
+
+  .app-container {
+      display: grid;
+      /*make the header with auto height*/
+      grid-template-rows: 82px 747px calc(100vh - 82px - 747px);
+      place-content: stretch;
   }
 
   header {
-    text-align: center;
+      text-align: center;
   }
 </style>
 
-<template>
+<div class="app-container">
   <header>
     <h1>Kyiv Rapid Transit Map</h1>
   </header>
 
   <main>
     <Map />
-    <Legend />
   </main>
-</template>
+
+  <footer>
+    <Legend />
+  </footer>
+</div>
