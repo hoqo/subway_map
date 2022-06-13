@@ -21,10 +21,6 @@ export const getLoaders = (mode) => {
         emitCss: true,
         hotReload: !isProdMode(mode),
         preprocess: sveltePreprocess({
-          defaults: {
-            script: 'typescript',
-            style: 'less',
-          },
           tsconfigFile: './tsconfig.json',
         }),
       },
