@@ -16,8 +16,10 @@
     "dev": "NODE_ENV=development webpack-dev-server",
     "start:dev": "npm run dev",
     "validate": "svelte-check --watch --tsconfig tsconfig.json",
-    "lint": "eslint ./src",
-    "lint:fix": "eslint ./src --fix"
+    "lint:check": "eslint ./src",
+    "lint:fix": "eslint ./src --fix",
+    "format:check": "prettier --check src",
+    "format:fix": "prettier --write src"
   },
   "lint-staged": {
     "/src/*.{js, ts, svelte}": [
