@@ -5,23 +5,27 @@ import { isProdMode } from './utils.js';
 
 export const getLoaders = (mode) => {
   const tsLoader = {
-    test: /\.(js|ts|svelte)$/,
-    exclude: /(node_modules)/,
+    test: /\.(js|ts)$/,
+    exclude: /node_modules/,
     use: {
       loader: 'ts-loader',
     },
   };
 
   const svelteLoader = {
-    test:/\.(html|svelte)$/,
+    test: /\.svelte$/,
     exclude: /node_modules/,
     use: {
       loader: 'svelte-loader',
       options: {
-        emitCss: true,
+        emitCss: isProdMode(mode),
         hotReload: !isProdMode(mode),
+        compilerOptions: {
+          dev: !isProdMode(mode),
+        },
         preprocess: sveltePreprocess({
           tsconfigFile: './tsconfig.json',
+          sourceMap: !isProdMode(mode),
         }),
       },
     },

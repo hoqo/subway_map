@@ -4,11 +4,6 @@
 </script>
 
 <style>
-  :global(body) {
-      padding: 0;
-      font-family: Courier, sans-serif;
-  }
-
   .app-container {
       display: grid;
       /*make the header with auto height*/

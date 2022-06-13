@@ -1,9 +1,4 @@
-import type { SvelteComponent } from 'svelte/internal';
 import type { tBend, tPoint } from 'types';
-
-export interface ExtendedWindow extends Window {
-  app: SvelteComponent;
-}
 
 export interface iMapItem {
   name: string;

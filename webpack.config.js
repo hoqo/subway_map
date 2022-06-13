@@ -3,7 +3,8 @@ import { fileURLToPath } from 'url';
 
 import { getLoaders, getPlugins } from './webpack/index.js';
 
-const __dirname = fileURLToPath(import.meta.url);
+// to get dirname on esmodules: get path to the current file -> get the dir
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const mode = process.env.NODE_ENV || 'development';
 
 export default {
