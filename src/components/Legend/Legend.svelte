@@ -9,8 +9,17 @@
   ];
 </script>
 
+<ul aria-label="Legend">
+  {#each legendItems as item}
+    <LegendItem {item} />
+  {/each}
+</ul>
+
 <style lang="less">
   ul {
+    display: flex;
+    gap: 16px;
+
     list-style-type: none;
 
     &:before {
@@ -20,9 +29,3 @@
     }
   }
 </style>
-
-<ul aria-label="Legend">
-  {#each legendItems as item}
-    <LegendItem {item} />
-  {/each}
-</ul>
