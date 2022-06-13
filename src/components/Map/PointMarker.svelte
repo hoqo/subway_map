@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import River from 'components/River/River.svelte';
   import { subwayLine } from 'components/Map/mocks';
   import { iSubwayStation } from 'interfaces';

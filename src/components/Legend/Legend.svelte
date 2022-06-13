@@ -1,24 +1,28 @@
 <script lang="ts">
   import LegendItem from './LegendItem.svelte';
-  import type { iLegendItem } from 'interfaces';
+  import type { iMapItem } from 'interfaces';
   import { dniproRiver, subwayLines } from 'components/Map/mocks';
 
-  const legendItems: iLegendItem[] = [
+  const legendItems: iMapItem[] = [
     dniproRiver,
-    ...subwayLines.map(({name, colorCode}) => ({name, colorCode}))
+    ...subwayLines.map(({ name, colorCode }) => ({ name, colorCode })),
   ];
 </script>
 
-<style>
-  section {
-    display: flex;
-    justify-content: space-between;
-    margin: 24px;
+<style lang="less">
+  ul {
+    list-style-type: none;
+
+    &:before {
+      content: attr(aria-label);
+      margin-bottom: 24px;
+      font-size: 1.5em;
+    }
   }
 </style>
 
-<section>
+<ul aria-label="Legend">
   {#each legendItems as item}
     <LegendItem {item} />
   {/each}
-</section>
+</ul>

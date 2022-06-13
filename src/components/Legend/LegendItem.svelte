@@ -1,12 +1,20 @@
 <script lang="ts">
-  import type { iLegendItem } from 'interfaces';
+  import type { iMapItem } from 'interfaces';
 
-  export let item: iLegendItem;
+  export let item: iMapItem;
 </script>
 
-<style>
-  .container {
+<style lang="less">
+  li {
     display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    &:first-child {
+      margin-top: 24px;
+    }
   }
 
   .color-block {
@@ -16,14 +24,10 @@
     border-radius: 4px;
     margin-right: 16px;
   }
-
-  .name {
-  }
 </style>
 
-<template>
-  <div class="container">
-    <div class="color-block" style="--color: {item.colorCode}"></div>
-    <span class="name"><strong>{item.name}</strong></span>
-  </div>
-</template>
+
+<li>
+  <span class="color-block" style="--color: {item.colorCode}"></span>
+  <span class="name">{item.name}</span>
+</li>
