@@ -1,12 +1,5 @@
 {
-  "env": {
-    "es2022": true
-  },
-  "parserOptions": {
-    "sourceType": "module"
-  },
   "plugins": ["prettier-plugin-svelte"],
-  "trailingComma": "es5",
   "tabWidth": 2,
   "singleQuote": true,
   "svelteSortOrder" : "options-scripts-markup-styles",

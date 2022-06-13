@@ -4,6 +4,11 @@
   export let item: iMapItem;
 </script>
 
+<li>
+  <span class="color-block" style="--color: {item.colorCode}"></span>
+  <span class="name">{item.name}</span>
+</li>
+
 <style lang="less">
   li {
     display: inline-flex;
@@ -17,9 +22,3 @@
     margin-right: 16px;
   }
 </style>
-
-
-<li>
-  <span class="color-block" style="--color: {item.colorCode}"></span>
-  <span class="name">{item.name}</span>
-</li>
